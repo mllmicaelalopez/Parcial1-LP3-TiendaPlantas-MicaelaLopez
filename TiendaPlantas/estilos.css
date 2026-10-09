@@ -1,0 +1,240 @@
+﻿:root {
+    --verde-oscuro: #2f5d3a;
+    --verde: #4a8c5c;
+    --verde-claro: #e8f3ea;
+    --fondo: #f6f8f4;
+    --texto: #263228;
+    --gris: #6b776d;
+    --borde: #d5dfd6;
+    --rojo: #b3402f;
+    --rojo-claro: #fbe9e6;
+    --amarillo: #fff3b0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.encabezado {
+    background: var(--verde-oscuro);
+    color: #fff;
+    padding: 16px 24px;
+}
+
+.encabezado .logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.encabezado .subtitulo {
+    display: block;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.contenedor {
+    max-width: 760px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.tarjeta {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+    color: var(--verde-oscuro);
+    margin-top: 0;
+}
+
+.ayuda {
+    color: var(--gris);
+    margin-top: -8px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.menu .opcion {
+    display: block;
+    padding: 18px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu .opcion:hover {
+    background: var(--verde);
+    color: #fff;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.entrada {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 10px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.entrada:focus {
+    outline: 2px solid var(--verde);
+    border-color: var(--verde);
+}
+
+.entrada-corta {
+    max-width: 90px;
+}
+
+.fila-busqueda {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.boton {
+    background: var(--verde);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--verde-oscuro);
+}
+
+.boton-peligro {
+    background: var(--rojo);
+}
+
+.boton-peligro:hover {
+    background: #8f3022;
+}
+
+.boton:disabled,
+.boton.aspNetDisabled {
+    background: #c9d1ca;
+    cursor: not-allowed;
+}
+
+.mensaje {
+    display: block;
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.mensaje:empty {
+    display: none;
+}
+
+.mensaje.ok {
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+}
+
+.mensaje.error {
+    background: var(--rojo-claro);
+    color: var(--rojo);
+}
+
+.mensaje.info {
+    background: var(--amarillo);
+    color: #6b5a00;
+}
+
+.grilla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 4px;
+}
+
+.grilla th {
+    background: var(--verde-oscuro);
+    color: #fff;
+    text-align: left;
+    padding: 8px 10px;
+}
+
+.grilla td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.grilla tr:nth-child(even) td {
+    background: #fafcf9;
+}
+
+.grilla a {
+    color: var(--verde);
+    font-weight: 600;
+}
+
+.grilla .fila-seleccionada td {
+    background: var(--amarillo);
+}
+
+.historial {
+    background: #fafcf9;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    padding: 12px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+    .tarjeta {
+        padding: 18px 16px;
+    }
+}

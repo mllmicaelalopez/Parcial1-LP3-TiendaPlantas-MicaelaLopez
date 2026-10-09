@@ -1,0 +1,20 @@
+# Archivos que genera Visual Studio y que NO se suben a GitHub
+
+# Configuración local de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Resultados de compilación
+bin/
+obj/
+
+# Paquetes NuGet (Visual Studio los vuelve a descargar solo)
+packages/
+
+# Historial generado al usar el sitio
+TiendaPlantas/App_Data/historial.txt
+
+# No subir al repo
+README.md
+.git-backup-subcarpeta/
